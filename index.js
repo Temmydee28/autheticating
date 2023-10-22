@@ -5,6 +5,7 @@ import bodyParser from 'body-parser';
 import ejs from 'ejs';
 import mongoose from 'mongoose';
 import md5 from 'md5';
+import path from 'path'; 
 import { Console } from 'console';
 import { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -17,7 +18,6 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
-
 
    const connectionString = process.env.MONGODB_CONNECT_URI;
 
